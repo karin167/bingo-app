@@ -45,21 +45,22 @@ body {
 }
 
 .bingo-cell {
-  width: 90px;
-  height: 90px;
+  width: 100px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   border: 2px solid white;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.8);
-  padding: 5px;
-  margin: 3px;
+  padding: 10px;
+  margin: 5px;
   overflow: hidden;
   word-wrap: break-word;
+  word-break: break-word;
 }
 
 .bingo-cell span {
@@ -120,52 +121,65 @@ body {
 
 @media (max-width: 1024px) {
   .bingo-cell {
-    width: 70px;
-    height: 70px;
-    font-size: 14px;
+    width: 75px;
+    height: 75px;
+    font-size: 12px;
+    padding: 5px;
+    margin: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    word-wrap: break-word;
+    white-space: normal;
+  }
+
+  .bingo-cell span {
+    display: block;
+    max-width: 100%;
+    word-break: break-word; /* שוברת מילים ארוכות מדי */
+    overflow-wrap: break-word; /* מבטיחה שהטקסט יישאר בגבולות */
+    text-align: center; /* ממורכז */
   }
 }
 
 @media (max-width: 768px) {
-  .confetti-wrapper {
-    top: 45%;
-  }
-  .bingo-title {
-    font-size: 1.8rem;
-  }
-
   .bingo-grid {
-    gap: 5px;
-  }
-
-  .bingo-cell {
-    width: 60px;
-    height: 60px;
-    font-size: 12px;
-  }
-
-  .reset-button {
-    font-size: 14px;
-    padding: 8px 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .confetti-wrapper {
-    top: 40%;
-  }
-  .bingo-title {
-    font-size: 1.5rem;
-  }
-
-  .bingo-grid {
+    grid-template-columns: repeat(5, 1fr);
     gap: 3px;
   }
 
   .bingo-cell {
-    width: 50px;
-    height: 50px;
-    font-size: 10px;
+    width: 65px;
+    height: 65px;
+    font-size: 9px;
+    padding: 3px;
+    margin: 2px;
+    white-space: nowrap;
+  }
+
+  .bingo-title {
+    font-size: 1.4rem;
+  }
+
+  .reset-button {
+    font-size: 13px;
+    padding: 7px 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bingo-cell {
+    width: 55px;
+    height: 55px;
+    font-size: 8px;
+    padding: 3px;
+    margin: 2px;
+  }
+
+  .bingo-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
   }
 
   .reset-button {

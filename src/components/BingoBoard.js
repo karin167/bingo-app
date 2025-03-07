@@ -16,7 +16,7 @@ const phrases = [
   "Labneh",
   "Sufganiyah",
   "Challah",
-  "Middle Eastern Dishes",
+  "pita",
   "Knafeh",
   "Tahini",
   "Meorav Yerushalmi",
@@ -31,7 +31,6 @@ const phrases = [
   "Khachapuri",
 ];
 
-// פונקציה לערבוב רנדומלי של המילים
 const shuffleArray = (array) => {
   let shuffled = [...array];
   for (let i = shuffled.length - 1; i > 0; i--) {
@@ -41,10 +40,9 @@ const shuffleArray = (array) => {
   return shuffled;
 };
 
-// פונקציה ליצירת כרטיס בינגו חדש עם ערבוב מילים
 const generateBingoCard = () => {
   let shuffled = shuffleArray(phrases).slice(0, 24);
-  shuffled.splice(12, 0, "Middle Eastern Dishes"); // הקוביה האמצעית תמיד נשארת
+  shuffled.splice(12, 0, "Middle Eastern Dishes");
   return shuffled;
 };
 
@@ -98,7 +96,7 @@ const BingoBoard = () => {
   };
 
   const resetBoard = () => {
-    setCard(generateBingoCard()); // יוצר לוח חדש עם סדר רנדומלי
+    setCard(generateBingoCard());
     setMarked(
       Array(25)
         .fill(false)
