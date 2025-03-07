@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+### Bingo Game Project**   
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+### **1️⃣ Why Did You Choose This Theme?**
+I chose Middle Eastern food as the theme for this bingo game because I have a personal connection to it. Being originally from the region, I have a deep appreciation for its rich culinary culture. The dishes in the game represent some of the most popular and beloved foods from the Middle East, making the game both fun and educational. Players can enjoy a lighthearted game while also learning about traditional meals from the region. Food is a universal language, and this theme adds an engaging, cultural aspect to the bingo experience.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+### **2️⃣ Why Did You Use Specific CSS & JS Libraries?**
+*For this project, I used several libraries to enhance both the functionality and the visual appeal of the game:*
+- **React.js** - Chosen for its efficient component-based architecture, which allows for reusability and easier state management.
+- **Confetti Package** - Used to celebrate a bingo win and enhance user engagement.
+- **Firebase** - Used for real-time data storage and synchronization across multiple players, ensuring fairness in multiplayer mode.
+- **CSS Custom Styling** - Instead of relying on a UI framework like Bootstrap, I created custom styles to match the Middle Eastern theme. This allowed for better control over the design, ensuring it remained immersive and unique.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### **3️⃣ Key Findings, Ideas, Challenges & Solutions**
+** Key Features Implemented:**
+-  **Custom Design:** The bingo board and UI were styled to match the theme, including a Middle Eastern food background.
+-  **Confetti Animation:** A fun way to visually celebrate when a player gets a bingo.
+-  **Responsive Design:** The game dynamically adapts to different screen sizes, ensuring a smooth experience on desktop, tablet, and mobile.
+-  **Multiple Wins:** The logic allows multiple bingos per game instead of a single win.
+-  **Persistent State Management:** The game logic ensures that once a player wins, the game doesn’t reset unless they choose to.
 
-### `npm test`
+** Challenges & Solutions:**
+1. **Problem:** Confetti continued appearing after each click, even if there was no new bingo.  
+   **Solution:** Implemented a timer to stop confetti after 4 seconds and ensured confetti only appears when a new bingo is detected.  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **Problem:** Ensuring the game works across different devices and screen sizes.  
+   **Solution:** Used CSS media queries to adjust font sizes, button placement, and the grid layout dynamically.  
 
-### `npm run build`
+3. **Problem:** Making sure multiple players get an equal chance to win.  
+   **Solution:** Integrated **Firebase** to store game state in real-time, ensuring that all players see the same board and have a fair chance at winning.  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### **4️⃣ Why Did You Use Firebase?**
+*"I chose Firebase because it offers real-time database synchronization, which is perfect for multiplayer interactions. With Firebase, multiple players can open the game link on different devices and receive the same bingo board. This ensures fairness and consistency across all players. Additionally, Firebase simplifies backend management since it handles authentication, storage, and database services, reducing the need for setting up a separate backend server."*
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+### **5️⃣ What Would You Improve or Add in the Future?**
+-  **Multiplayer Mode with Live Updates** - Right now, Firebase ensures fair play, but a fully interactive multiplayer mode where players can compete against each other in real-time could be added.
+-  **Voice Announcements** - Adding a feature where the game reads out the food names in different languages to make it more engaging and educational.
+-  **Leaderboard** - Implementing a ranking system to track players' scores and display winners in a leaderboard.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### **Final Thoughts**
+*"This project was a fun challenge that combined game development, UI/UX design, and real-time database management. It demonstrated the power of React in managing interactive components while also highlighting the importance of well-structured CSS for responsive design. By integrating Firebase, the game became multiplayer-ready, ensuring equal chances for all players. Overall, this was a fantastic experience blending technical problem-solving with creativity!"*
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+<img width="616" alt="Screenshot 2025-03-07 at 02 36 47" src="https://github.com/user-attachments/assets/6a0e24b3-805a-412d-bdca-61e6e7112233"  style="max-width: 400px; height: auto; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);" />
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<img width="616" alt="Screenshot 2025-03-07 at 02 36 47" src="https://github.com/user-attachments/assets/75b645a7-9695-4f60-859b-7690646ba82c"  style="max-width: 400px; height: auto; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);"/>ֿֿ
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<img width="616" alt="Screenshot 2025-03-07 at 02 36 54" src="https://github.com/user-attachments/assets/e0ef3b6b-eed1-4789-8d13-c15501c5dbea" style="max-width: 400px; height: auto; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);" />
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
