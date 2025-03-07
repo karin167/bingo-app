@@ -69,6 +69,7 @@ The Middle Eastern Food Bingo Game is a web-based application that combines the 
 
 
 
+### Images:
 
 <img width="616" alt="Screenshot 2025-03-07 at 02 36 47" src="https://github.com/user-attachments/assets/6a0e24b3-805a-412d-bdca-61e6e7112233"  style="max-width: 400px; height: auto; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);" />
 
