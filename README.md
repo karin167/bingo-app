@@ -62,7 +62,6 @@ For this project, I used several libraries to enhance both the functionality and
 <img width="616" alt="Screenshot 2025-03-07 at 02 36 54" src="https://github.com/user-attachments/assets/e0ef3b6b-eed1-4789-8d13-c15501c5dbea" style="max-width: 400px; height: auto; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);" />
 
 
-<img width="1790" alt="Screenshot 2025-03-07 at 02 46 45" src="https://github.com/user-attachments/assets/bcf67afb-85a5-4fa2-974f-51c6acd339c9" style="max-width: 400px; height: auto; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);" />
 
 
 <img width="1652" alt="Screenshot 2025-03-07 at 02 47 02" src="https://github.com/user-attachments/assets/883d7b56-b220-4741-b3d7-b393d7fc865f" style="max-width: 400px; height: auto; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);" />
