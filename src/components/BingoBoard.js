@@ -67,7 +67,7 @@ const BingoBoard = () => {
     if (bingoMatches > bingoCount) {
       setBingoCount(bingoMatches);
       setConfettiActive(true);
-      setTimeout(() => setConfettiActive(false), 4000);
+      setTimeout(() => setConfettiActive(false), 5000);
     }
   }, [marked, bingoCount]);
 
