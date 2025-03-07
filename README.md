@@ -1,4 +1,4 @@
-### Bingo Game Project**   
+### Bingo Game Project  
 
 ---
 
@@ -7,7 +7,7 @@ I chose Middle Eastern food as the theme for this bingo game because I have a pe
 
 ---
 
-### 2 Why Did You Use Specific CSS & JS Libraries?**
+### 2 Why Did You Use Specific CSS & JS Libraries?
 For this project, I used several libraries to enhance both the functionality and the visual appeal of the game:*
 - **React.js** - Chosen for its efficient component-based architecture, which allows for reusability and easier state management.
 - **Confetti Package** - Used to celebrate a bingo win and enhance user engagement.
@@ -16,7 +16,7 @@ For this project, I used several libraries to enhance both the functionality and
 
 ---
 
-### 3 Key Findings, Ideas, Challenges & Solutions**
+### 3 Key Findings, Ideas, Challenges & Solutions
 ** Key Features Implemented:**
 -  **Custom Design:** The bingo board and UI were styled to match the theme, including a Middle Eastern food background.
 -  **Confetti Animation:** A fun way to visually celebrate when a player gets a bingo.
@@ -26,7 +26,7 @@ For this project, I used several libraries to enhance both the functionality and
 
 ** Challenges & Solutions:**
 1. **Problem:** Confetti continued appearing after each click, even if there was no new bingo.  
-   **Solution:** Implemented a timer to stop confetti after 4 seconds and ensured confetti only appears when a new bingo is detected.  
+   **Solution:** Implemented a timer to stop confetti after 5 seconds and ensured confetti only appears when a new bingo is detected.  
 
 2. **Problem:** Ensuring the game works across different devices and screen sizes.  
    **Solution:** Used CSS media queries to adjust font sizes, button placement, and the grid layout dynamically.  
@@ -36,7 +36,7 @@ For this project, I used several libraries to enhance both the functionality and
 
 ---
 
-### 4 Why Did You Use Firebase?**
+### 4 Why Did You Use Firebase?
 *I chose Firebase because it offers real-time database synchronization, which is perfect for multiplayer interactions. With Firebase, multiple players can open the game link on different devices and receive the same bingo board. This ensures fairness and consistency across all players. Additionally, Firebase simplifies backend management since it handles authentication, storage, and database services, reducing the need for setting up a separate backend server."
 
 ---
