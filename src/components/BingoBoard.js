@@ -31,7 +31,22 @@ const phrases = [
   "Khachapuri",
 ];
 
-const generateBingoCard = () => [...phrases];
+// פונקציה לערבוב רנדומלי של המילים
+const shuffleArray = (array) => {
+  let shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+};
+
+// פונקציה ליצירת כרטיס בינגו חדש עם ערבוב מילים
+const generateBingoCard = () => {
+  let shuffled = shuffleArray(phrases).slice(0, 24);
+  shuffled.splice(12, 0, "Middle Eastern Dishes"); // הקוביה האמצעית תמיד נשארת
+  return shuffled;
+};
 
 const BingoBoard = () => {
   const [card, setCard] = useState(generateBingoCard());
@@ -83,7 +98,7 @@ const BingoBoard = () => {
   };
 
   const resetBoard = () => {
-    setCard(generateBingoCard());
+    setCard(generateBingoCard()); // יוצר לוח חדש עם סדר רנדומלי
     setMarked(
       Array(25)
         .fill(false)
