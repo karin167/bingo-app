@@ -16,7 +16,7 @@ const phrases = [
   "Labneh",
   "Sufganiyah",
   "Challah",
-  "pita",
+  "Pita",
   "Knafeh",
   "Tahini",
   "Meorav Yerushalmi",
