@@ -137,53 +137,56 @@ body {
   .bingo-cell span {
     display: block;
     max-width: 100%;
-    word-break: break-word; /* שוברת מילים ארוכות מדי */
-    overflow-wrap: break-word; /* מבטיחה שהטקסט יישאר בגבולות */
-    text-align: center; /* ממורכז */
+    word-break: break-word;
+    overflow-wrap: break-word;
+    text-align: center;
   }
 }
 
 @media (max-width: 768px) {
-  .bingo-grid {
-    grid-template-columns: repeat(5, 1fr);
-    gap: 3px;
-  }
-
   .bingo-cell {
-    width: 65px;
-    height: 65px;
-    font-size: 9px;
-    padding: 3px;
+    width: 70px;
+    height: 70px;
+    font-size: 12px;
+    padding: 4px;
     margin: 2px;
-    white-space: nowrap;
+    word-wrap: break-word;
+    white-space: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
-  .bingo-title {
-    font-size: 1.4rem;
-  }
-
-  .reset-button {
-    font-size: 13px;
-    padding: 7px 14px;
+  .bingo-cell span {
+    display: block;
+    max-width: 100%;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    text-align: center;
   }
 }
 
 @media (max-width: 480px) {
   .bingo-cell {
-    width: 55px;
-    height: 55px;
-    font-size: 8px;
+    width: 60px;
+    height: 60px;
+    font-size: 10px;
     padding: 3px;
     margin: 2px;
+    word-wrap: break-word;
+    white-space: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
-  .bingo-title {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-  }
-
-  .reset-button {
-    font-size: 12px;
-    padding: 6px 12px;
+  .bingo-cell span {
+    display: block;
+    max-width: 100%;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    text-align: center;
   }
 }
