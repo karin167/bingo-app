@@ -43,30 +43,32 @@ body {
   grid-template-columns: repeat(5, 1fr);
   gap: 10px;
 }
-
 .bingo-cell {
   width: 100px;
   height: 100px;
+  font-size: 16px;
+  padding: 6px;
+  margin: 4px;
+  word-wrap: break-word;
+  white-space: normal;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-size: 14px;
   font-weight: bold;
-  border: 2px solid white;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.8);
-  padding: 10px;
-  margin: 5px;
-  overflow: hidden;
-  word-wrap: break-word;
-  word-break: break-word;
+  border: 2px solid black;
+  background: rgba(255, 255, 255, 0.8); /* רקע אחיד */
+  border-radius: 12px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease-in-out;
 }
 
 .bingo-cell span {
+  display: block;
   max-width: 100%;
-  overflow-wrap: break-word;
   word-break: break-word;
+  overflow-wrap: break-word;
+  text-align: center;
 }
 
 .bingo-cell:hover {
@@ -120,73 +122,37 @@ body {
 }
 
 @media (max-width: 1024px) {
-  .bingo-cell {
-    width: 75px;
-    height: 75px;
-    font-size: 12px;
-    padding: 5px;
-    margin: 3px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    word-wrap: break-word;
-    white-space: normal;
+  .bingo-grid {
+    width: 90%;
   }
-
-  .bingo-cell span {
-    display: block;
-    max-width: 100%;
-    word-break: break-word;
-    overflow-wrap: break-word;
-    text-align: center;
+  .bingo-cell {
+    width: 85px;
+    height: 85px;
+    font-size: 14px;
+    padding: 5px;
   }
 }
 
 @media (max-width: 768px) {
+  .bingo-grid {
+    width: 95%;
+  }
   .bingo-cell {
-    width: 70px;
-    height: 70px;
+    width: 75px;
+    height: 75px;
     font-size: 12px;
     padding: 4px;
-    margin: 2px;
-    word-wrap: break-word;
-    white-space: normal;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .bingo-cell span {
-    display: block;
-    max-width: 100%;
-    word-break: break-word;
-    overflow-wrap: break-word;
-    text-align: center;
   }
 }
 
 @media (max-width: 480px) {
+  .bingo-grid {
+    width: 100%;
+  }
   .bingo-cell {
-    width: 60px;
-    height: 60px;
+    width: 65px;
+    height: 65px;
     font-size: 10px;
     padding: 3px;
-    margin: 2px;
-    word-wrap: break-word;
-    white-space: normal;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .bingo-cell span {
-    display: block;
-    max-width: 100%;
-    word-break: break-word;
-    overflow-wrap: break-word;
-    text-align: center;
   }
 }
