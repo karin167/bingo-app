@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import Confetti from "react-confetti";
+import { useWindowSize } from "react-use";
 import "../App.css";
 
 const phrases = [
@@ -11,11 +12,11 @@ const phrases = [
   "Bourekas",
   "Jachnun",
   "Malabi",
-  "Ptitim (Israeli Couscous)",
+  "Ptitim (Couscous)",
   "Labneh",
   "Sufganiyah",
   "Challah",
-  "Middle Eastern Dishes", // FREE SPACE
+  "Middle Eastern Dishes",
   "Knafeh",
   "Tahini",
   "Meorav Yerushalmi",
@@ -23,17 +24,14 @@ const phrases = [
   "Arayes",
   "Mujadara",
   "Matbucha",
-  "Jerusalem Mixed Grill",
+  "Mixed Grill",
   "Rugelach",
   "Shawarma",
   "Laffa",
   "Khachapuri",
 ];
 
-const generateBingoCard = () => {
-  let shuffled = [...phrases];
-  return shuffled;
-};
+const generateBingoCard = () => [...phrases];
 
 const BingoBoard = () => {
   const [card, setCard] = useState(generateBingoCard());
@@ -41,19 +39,10 @@ const BingoBoard = () => {
     Array(25)
       .fill(false)
       .map((_, i) => (i === 12 ? true : false))
-  ); // Free space always marked
+  );
   const [confettiActive, setConfettiActive] = useState(false);
   const [bingoCount, setBingoCount] = useState(0);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // בודק אם זה מסך קטן
-
-  // עדכון כאשר המסך משתנה
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const { width, height } = useWindowSize();
 
   const checkBingo = useCallback(() => {
     const winningPatterns = [
@@ -61,14 +50,14 @@ const BingoBoard = () => {
       [5, 6, 7, 8, 9],
       [10, 11, 12, 13, 14],
       [15, 16, 17, 18, 19],
-      [20, 21, 22, 23, 24], // Rows
+      [20, 21, 22, 23, 24],
       [0, 5, 10, 15, 20],
       [1, 6, 11, 16, 21],
       [2, 7, 12, 17, 22],
       [3, 8, 13, 18, 23],
-      [4, 9, 14, 19, 24], // Columns
+      [4, 9, 14, 19, 24],
       [0, 6, 12, 18, 24],
-      [4, 8, 12, 16, 20], // Diagonals including free space
+      [4, 8, 12, 16, 20],
     ];
 
     const bingoMatches = winningPatterns.filter((pattern) =>
@@ -78,7 +67,7 @@ const BingoBoard = () => {
     if (bingoMatches > bingoCount) {
       setBingoCount(bingoMatches);
       setConfettiActive(true);
-      setTimeout(() => setConfettiActive(false), 5000); // Confetti disappears after 4 seconds
+      setTimeout(() => setConfettiActive(false), 4000);
     }
   }, [marked, bingoCount]);
 
@@ -87,7 +76,7 @@ const BingoBoard = () => {
   }, [marked, checkBingo]);
 
   const handleCellClick = (index) => {
-    if (index === 12) return; // Free space stays always marked
+    if (index === 12) return;
     const newMarked = [...marked];
     newMarked[index] = !newMarked[index];
     setMarked(newMarked);
@@ -99,19 +88,23 @@ const BingoBoard = () => {
       Array(25)
         .fill(false)
         .map((_, i) => (i === 12 ? true : false))
-    ); // Free space always marked
+    );
     setConfettiActive(false);
     setBingoCount(0);
   };
 
   return (
     <div className="bingo-container">
-      {confettiActive && <Confetti />}
-      <h1 className="bingo-title">
-        {isMobile ? "ME Food Bingo" : "Middle Eastern Food Bingo"}
-      </h1>
+      {confettiActive && (
+        <div className="confetti-wrapper">
+          <Confetti width={width} height={height} />
+        </div>
+      )}
+
+      <h1 className="bingo-title">Middle Eastern Food Bingo</h1>
+
       <div className="bingo-wrapper">
-        <div className={`bingo-grid ${isMobile ? "mobile-grid" : ""}`}>
+        <div className="bingo-grid">
           {card.map((text, index) => (
             <div
               key={index}
@@ -129,6 +122,7 @@ const BingoBoard = () => {
           ))}
         </div>
       </div>
+
       <button className="reset-button" onClick={resetBoard}>
         🔄 Reset Game
       </button>

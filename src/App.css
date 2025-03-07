@@ -5,7 +5,6 @@ body {
   background-attachment: fixed;
 }
 
-/* לוודא שהבינגו יופיע במרכז */
 .bingo-container {
   display: flex;
   flex-direction: column;
@@ -14,9 +13,15 @@ body {
   min-height: 100vh;
   text-align: center;
   padding: 20px;
+  position: relative;
 }
-
-/* הכותרת ממורכזת עם רקע יפה */
+.bingo-wrapper {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
 .bingo-title {
   font-size: 3rem;
   font-weight: bold;
@@ -26,7 +31,6 @@ body {
   text-align: center;
 }
 
-/* רקע שקוף לטבלת הבינגו */
 .bingo-shadow {
   background: rgba(255, 255, 255, 0.85);
   padding: 20px;
@@ -40,9 +44,8 @@ body {
   gap: 10px;
 }
 
-/* קוביות הבינגו */
 .bingo-cell {
-  width: 90px; /* גודל ברירת מחדל */
+  width: 90px;
   height: 90px;
   display: flex;
   align-items: center;
@@ -60,7 +63,7 @@ body {
 }
 
 .bingo-cell span {
-  max-width: 100%; /* לוודא שהטקסט לא עובר את גבולות הקוביה */
+  max-width: 100%;
   overflow-wrap: break-word;
   word-break: break-word;
 }
@@ -69,7 +72,6 @@ body {
   transform: scale(1.1);
 }
 
-/* קוביות שסומנו */
 .marked {
   background: linear-gradient(135deg, #e75838, #880e4f);
   text-decoration: line-through;
@@ -78,19 +80,16 @@ body {
 
 .free-cell-circle {
   background: linear-gradient(135deg, #e75838, #880e4f);
-  color: rgb(255, 255, 255) !important; /* טקסט שחור */
-  border: 3px solid black; /* מסגרת שחורה */
+  color: rgb(255, 255, 255) !important;
   font-weight: bold;
   border-radius: 10px;
-  text-decoration: none !important; /* לוודא שאין קו חוצה */
+  text-decoration: none !important;
 }
 
-/* לוודא שהקו החוצה לא מוחל על ה-FREE */
 .free-cell-circle span {
   text-decoration: none !important;
 }
 
-/* כפתור האיפוס */
 .reset-button {
   margin-top: 20px;
   padding: 10px 20px;
@@ -108,6 +107,16 @@ body {
 .reset-button:hover {
   transform: scale(1.05);
 }
+.confetti-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
 
 @media (max-width: 1024px) {
   .bingo-cell {
@@ -118,6 +127,9 @@ body {
 }
 
 @media (max-width: 768px) {
+  .confetti-wrapper {
+    top: 45%;
+  }
   .bingo-title {
     font-size: 1.8rem;
   }
@@ -139,6 +151,9 @@ body {
 }
 
 @media (max-width: 480px) {
+  .confetti-wrapper {
+    top: 40%;
+  }
   .bingo-title {
     font-size: 1.5rem;
   }
