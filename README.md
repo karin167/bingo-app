@@ -76,15 +76,12 @@ The Middle Eastern Food Bingo Game is a web-based application that combines the 
 <img width="616" alt="Screenshot 2025-03-07 at 02 36 47" src="https://github.com/user-attachments/assets/6a0e24b3-805a-412d-bdca-61e6e7112233"  style="max-width: 400px; height: auto; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);" />
 
 
-
-
 <img width="616" alt="Screenshot 2025-03-07 at 02 36 54" src="https://github.com/user-attachments/assets/e0ef3b6b-eed1-4789-8d13-c15501c5dbea" style="max-width: 400px; height: auto; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);" />
 
+<img width="1792" alt="Screenshot 2025-03-07 at 15 16 56" src="https://github.com/user-attachments/assets/ddaaf847-0011-4b47-87fc-1d2db4c66b67" style="max-width: 400px; height: auto; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);"  />
 
 
-
-<img width="1652" alt="Screenshot 2025-03-07 at 02 47 02" src="https://github.com/user-attachments/assets/883d7b56-b220-4741-b3d7-b393d7fc865f" style="max-width: 400px; height: auto; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);" />
-
+<img width="558" alt="Screenshot 2025-03-07 at 15 18 18" src="https://github.com/user-attachments/assets/1e4011d2-f932-4deb-96a9-158e9faeced7" style="max-width: 400px; height: auto; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);"  />
 
 
 
