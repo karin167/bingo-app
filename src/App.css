@@ -1,38 +1,160 @@
-.App {
-  text-align: center;
+body {
+  background-image: url("../public/bg-image.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* לוודא שהבינגו יופיע במרכז */
+.bingo-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  min-height: 100vh;
+  text-align: center;
+  padding: 20px;
+}
+
+/* הכותרת ממורכזת עם רקע יפה */
+.bingo-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* רקע שקוף לטבלת הבינגו */
+.bingo-shadow {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.bingo-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+/* קוביות הבינגו */
+.bingo-cell {
+  width: 90px; /* גודל ברירת מחדל */
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid white;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 5px;
+  margin: 3px;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+.bingo-cell span {
+  max-width: 100%; /* לוודא שהטקסט לא עובר את גבולות הקוביה */
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.bingo-cell:hover {
+  transform: scale(1.1);
+}
+
+/* קוביות שסומנו */
+.marked {
+  background: linear-gradient(135deg, #e75838, #880e4f);
+  text-decoration: line-through;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.free-cell-circle {
+  background: linear-gradient(135deg, #e75838, #880e4f);
+  color: rgb(255, 255, 255) !important; /* טקסט שחור */
+  border: 3px solid black; /* מסגרת שחורה */
+  font-weight: bold;
+  border-radius: 10px;
+  text-decoration: none !important; /* לוודא שאין קו חוצה */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* לוודא שהקו החוצה לא מוחל על ה-FREE */
+.free-cell-circle span {
+  text-decoration: none !important;
+}
+
+/* כפתור האיפוס */
+.reset-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #e75838, #880e4f);
+  color: white;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease-in-out;
+}
+
+.reset-button:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+  .bingo-cell {
+    width: 70px;
+    height: 70px;
+    font-size: 14px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 768px) {
+  .bingo-title {
+    font-size: 1.8rem;
+  }
+
+  .bingo-grid {
+    gap: 5px;
+  }
+
+  .bingo-cell {
+    width: 60px;
+    height: 60px;
+    font-size: 12px;
+  }
+
+  .reset-button {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bingo-title {
+    font-size: 1.5rem;
+  }
+
+  .bingo-grid {
+    gap: 3px;
+  }
+
+  .bingo-cell {
+    width: 50px;
+    height: 50px;
+    font-size: 10px;
+  }
+
+  .reset-button {
+    font-size: 12px;
+    padding: 6px 12px;
   }
 }
