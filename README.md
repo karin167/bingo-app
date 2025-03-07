@@ -1,6 +1,7 @@
 # Middle Eastern Food Bingo Game
 
 **Link to the game:** [https://me-food-bingo-game.netlify.app/](https://me-food-bingo-game.netlify.app/)
+**Link to the game explanation:** [https://buttoned-scorpio-21d.notion.site/Bingo-Game-Project-1af2020a703e80c6a9e4fd9d5cb6dd84?pvs=4](https://buttoned-scorpio-21d.notion.site/Bingo-Game-Project-1af2020a703e80c6a9e4fd9d5cb6dd84?pvs=4)
 
 ## Table of Contents
 
