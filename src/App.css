@@ -133,26 +133,69 @@ body {
   }
 }
 
-@media (max-width: 768px) {
-  .bingo-grid {
-    width: 95%;
+/* התאמות מובייל */
+@media screen and (max-width: 768px) {
+  /* הקטנת הרקע השקוף */
+  .bingo-shadow {
+    max-width: 70%; /* הקטנת גודל הקונטיינר */
+    padding: 10px;
+    margin: auto;
   }
+
+  /* הקטנת הכותרת */
+  .bingo-title {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+  }
+
+  /* התאמת ריווח כללי */
+  .bingo-grid {
+    gap: 3px;
+    padding: 3px;
+  }
+
+  /* הקטנת הקוביות */
   .bingo-cell {
-    width: 75px;
-    height: 75px;
-    font-size: 12px;
+    width: 55px;
+    height: 55px;
+    font-size: 7px;
     padding: 4px;
+    line-height: 1.1;
+  }
+
+  /* התאמת הכפתור */
+  .reset-button {
+    font-size: 14px;
+    padding: 7px 12px;
+    margin-top: 8px;
   }
 }
 
-@media (max-width: 480px) {
-  .bingo-grid {
-    width: 100%;
+/* התאמות למסכים קטנים במיוחד (iPhone SE, Pixel 4a וכו') */
+@media screen and (max-width: 480px) {
+  .bingo-shadow {
+    max-width: 75%; /* הקטנת עוד יותר את הלוח */
+    padding: 8px;
   }
+
+  .bingo-grid {
+    gap: 2px;
+  }
+
   .bingo-cell {
-    width: 65px;
-    height: 65px;
-    font-size: 10px;
+    width: 48px;
+    height: 48px;
+    font-size: 7px;
     padding: 3px;
+    line-height: 1;
+  }
+
+  .bingo-title {
+    font-size: 1.4rem;
+  }
+
+  .reset-button {
+    font-size: 13px;
+    padding: 5px 10px;
   }
 }
